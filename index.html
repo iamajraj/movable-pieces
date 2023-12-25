@@ -12,32 +12,66 @@
       <p class="text-2xl">
         Select the <span class="font-semibold">*Piece*</span> to Move
       </p>
-      <div
-        class="board relative w-[400px] h-[400px] grid border border-black grid-cols-4 grid-rows-4">
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
-        <div class="box border"></div>
+      <div class="mt-5 flex gap-10 items-start">
+        <div
+          class="shrink-0 board relative w-[400px] h-[400px] grid border border-black grid-cols-5 grid-rows-5">
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
+          <div class="box border"></div>
 
-        <div class="circle bg-blue-500">1</div>
-        <div class="circle bg-red-500">2</div>
-        <div class="circle bg-yellow-500">3</div>
-        <div class="circle bg-green-500">4</div>
-        <div class="circle bg-indigo-500">5</div>
-        <div class="circle bg-violet-500">6</div>
-        <div class="circle bg-orange-500">7</div>
+          <div class="number" style="--idx: 0">0</div>
+          <div class="number" style="--idx: 1">1</div>
+          <div class="number" style="--idx: 2">2</div>
+          <div class="number" style="--idx: 3">3</div>
+          <div class="number" style="--idx: 4">4</div>
+
+          <div class="alphabet" style="--idx: 0">a</div>
+          <div class="alphabet" style="--idx: 1">b</div>
+          <div class="alphabet" style="--idx: 2">c</div>
+          <div class="alphabet" style="--idx: 3">d</div>
+          <div class="alphabet" style="--idx: 4">e</div>
+
+          <div class="circle team1">1</div>
+          <div class="circle team1">2</div>
+          <div class="circle team1">3</div>
+          <div class="circle team1">4</div>
+          <div class="circle team1">5</div>
+
+          <div class="circle team2">1</div>
+          <div class="circle team2">2</div>
+          <div class="circle team2">3</div>
+          <div class="circle team2">4</div>
+          <div class="circle team2">5</div>
+        </div>
+
+        <div class="min-w-[300px]">
+          <p class="border-b pb-2">Moves So far</p>
+          <!-- Moves Container -->
+          <div
+            class="moves-container mt-5 flex flex-col max-h-[320px] overflow-y-scroll pr-4 gap-2"></div>
+        </div>
       </div>
     </div>
   </body>

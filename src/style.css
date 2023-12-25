@@ -6,6 +6,10 @@
   .circle {
     @apply absolute w-10 h-10 rounded-full bg-blue-500 transition-all flex items-center justify-center text-white cursor-default;
   }
+
+  .team1 {
+    @apply bg-red-500;
+  }
 }
 
 html,
@@ -22,6 +26,32 @@ body {
   z-index: 10;
 }
 
+.move {
+  border: 1px solid gray;
+  border-radius: 1000px;
+  padding: 4px;
+  text-align: center;
+}
+
+.arrow {
+  position: absolute;
+  background: black;
+  height: 100px;
+  width: 5px;
+}
+
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
 .arrow-enter {
   animation: animate-arrow 200ms ease-in forwards;
 }
@@ -33,4 +63,22 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+.number {
+  position: absolute;
+  top: calc(79px * var(--idx));
+  left: -5%;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+}
+
+.alphabet {
+  position: absolute;
+  left: calc(79px * var(--idx));
+  bottom: -14%;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
 }
