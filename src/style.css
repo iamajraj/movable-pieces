@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .circle {
+    @apply absolute w-10 h-10 rounded-full bg-blue-500 transition-all flex items-center justify-center text-white cursor-default;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.selected {
+  border: 3px solid black;
+  z-index: 10;
+}
