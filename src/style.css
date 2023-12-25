@@ -21,3 +21,16 @@ body {
   border: 3px solid black;
   z-index: 10;
 }
+
+.arrow-enter {
+  animation: animate-arrow 200ms ease-in forwards;
+}
+
+@keyframes animate-arrow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

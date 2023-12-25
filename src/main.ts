@@ -1,5 +1,6 @@
 import './style.css';
 
+const board = document.querySelector('.board') as HTMLDivElement;
 const allBox = document.querySelectorAll('.box') as NodeListOf<HTMLDivElement>;
 const allCircles = document.querySelectorAll(
   '.circle'
@@ -70,4 +71,18 @@ function setCirclePosition(
 ) {
   circle.style.left = x + width / 2 - circle.clientWidth / 2 + 'px';
   circle.style.top = y + height / 2 - circle.clientHeight / 2 + 'px';
+}
+
+function getBoxFromXY(x: number, y: number): HTMLDivElement {
+  let foundBox: HTMLDivElement | null = null;
+  for (let i = 0; i < allBox.length; i++) {
+    const box = allBox[i];
+    if (x > box.offsetLeft && x < box.offsetLeft + box.clientWidth) {
+      if (y > box.offsetTop && y < box.offsetTop + box.clientHeight) {
+        foundBox = box;
+        break;
+      }
+    }
+  }
+  return foundBox!;
 }
