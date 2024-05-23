@@ -1,6 +1,6 @@
 import './style.css';
 
-const board = document.querySelector('.board') as HTMLDivElement;
+// const board = document.querySelector('.board') as HTMLDivElement;
 const allBox = document.querySelectorAll('.box') as NodeListOf<HTMLDivElement>;
 const allCircles = document.querySelectorAll(
   '.circle'
